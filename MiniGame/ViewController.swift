@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
   @IBOutlet weak var firstView: CustomView!
   @IBOutlet weak var secondView: CustomView!
   @IBOutlet weak var thirdView: CustomView!
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
   }
-
+  
   @IBAction func panAction(_ gesture: UIPanGestureRecognizer) {
     eatView(firtsViews: firstView, secondViews: secondView, gesture: gesture)
   }
@@ -48,13 +48,14 @@ class ViewController: UIViewController {
   @IBAction func seventhPanAction(_ gesture: UIPanGestureRecognizer) {
     eatView(firtsViews: seventhView, secondViews: firstView, gesture: gesture)
   }
+  
   func eatView(firtsViews: CustomView!, secondViews: CustomView!, gesture: UIPanGestureRecognizer) {
     let firstViewFrame = firtsViews.frame
     let secondViewFrame = secondViews.frame
     let hellperRange: CGFloat = 20
-
+    
     let gestureTranslation = gesture.translation(in: view)
-
+    
     guard let gestureView = gesture.view else {
       return
     }
