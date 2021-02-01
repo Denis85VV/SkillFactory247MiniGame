@@ -13,6 +13,8 @@
 		92F9979025C7F816001EAB0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F9978E25C7F816001EAB0A /* Main.storyboard */; };
 		92F9979225C7F81A001EAB0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92F9979125C7F81A001EAB0A /* Assets.xcassets */; };
 		92F9979525C7F81A001EAB0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F9979325C7F81A001EAB0A /* LaunchScreen.storyboard */; };
+		92F997A225C7F9E9001EAB0A /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F997A125C7F9E9001EAB0A /* CustomView.xib */; };
+		92F997A525C7F9FD001EAB0A /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F997A425C7F9FD001EAB0A /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		92F9979125C7F81A001EAB0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92F9979425C7F81A001EAB0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92F9979625C7F81A001EAB0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92F997A125C7F9E9001EAB0A /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		92F997A425C7F9FD001EAB0A /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				92F9978825C7F816001EAB0A /* AppDelegate.swift */,
 				92F9978A25C7F816001EAB0A /* SceneDelegate.swift */,
 				92F9978C25C7F816001EAB0A /* ViewController.swift */,
+				92F997A125C7F9E9001EAB0A /* CustomView.xib */,
+				92F997A425C7F9FD001EAB0A /* CustomView.swift */,
 				92F9978E25C7F816001EAB0A /* Main.storyboard */,
 				92F9979125C7F81A001EAB0A /* Assets.xcassets */,
 				92F9979325C7F81A001EAB0A /* LaunchScreen.storyboard */,
@@ -125,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F9979525C7F81A001EAB0A /* LaunchScreen.storyboard in Resources */,
+				92F997A225C7F9E9001EAB0A /* CustomView.xib in Resources */,
 				92F9979225C7F81A001EAB0A /* Assets.xcassets in Resources */,
 				92F9979025C7F816001EAB0A /* Main.storyboard in Resources */,
 			);
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F9978D25C7F816001EAB0A /* ViewController.swift in Sources */,
+				92F997A525C7F9FD001EAB0A /* CustomView.swift in Sources */,
 				92F9978925C7F816001EAB0A /* AppDelegate.swift in Sources */,
 				92F9978B25C7F816001EAB0A /* SceneDelegate.swift in Sources */,
 			);
