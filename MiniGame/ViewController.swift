@@ -22,40 +22,39 @@ class ViewController: UIViewController {
   }
 
   @IBAction func panAction(_ gesture: UIPanGestureRecognizer) {
-    let gestureTranslation = gesture.translation(in: view)
-    guard let gestureView = gesture.view else {
-      return
-    }
-    gestureView.center = CGPoint(
-      x: gestureView.center.x + gestureTranslation.x,
-      y: gestureView.center.y + gestureTranslation.y
-    )
-    gesture.setTranslation(.zero, in: view)
-    guard gesture.state == .ended else {
-      return
-    }
-    moveViewViaPanAction(firtsViews: firstView, secondViews: secondView)
+    eatView(firtsViews: firstView, secondViews: secondView, gesture: gesture)
   }
   
   @IBAction func secondPanAction(_ gesture: UIPanGestureRecognizer) {
-    let gestureTranslation = gesture.translation(in: view)
-    guard let gestureView = gesture.view else {
-      return
-    }
-    gestureView.center = CGPoint(
-      x: gestureView.center.x + gestureTranslation.x,
-      y: gestureView.center.y + gestureTranslation.y
-    )
-    gesture.setTranslation(.zero, in: view)
-    guard gesture.state == .ended else {
-      return
-    }
-    moveViewViaPanAction(firtsViews: secondView, secondViews: thirdView)
+    eatView(firtsViews: secondView, secondViews: thirdView, gesture: gesture)
   }
   
   @IBAction func thirdPanAction(_ gesture: UIPanGestureRecognizer) {
-    
+    eatView(firtsViews: thirdView, secondViews: fourthView, gesture: gesture)
+  }
+  
+  @IBAction func fourthPanAction(_ gesture: UIPanGestureRecognizer) {
+    eatView(firtsViews: fourthView, secondViews: fifthView, gesture: gesture)
+  }
+  
+  @IBAction func fifthPanAction(_ gesture: UIPanGestureRecognizer) {
+    eatView(firtsViews: fifthView, secondViews: sixthView, gesture: gesture)
+  }
+  
+  @IBAction func sixthPanAction(_ gesture: UIPanGestureRecognizer) {
+    eatView(firtsViews: sixthView, secondViews: seventhView, gesture: gesture)
+  }
+  
+  @IBAction func seventhPanAction(_ gesture: UIPanGestureRecognizer) {
+    eatView(firtsViews: seventhView, secondViews: firstView, gesture: gesture)
+  }
+  func eatView(firtsViews: CustomView!, secondViews: CustomView!, gesture: UIPanGestureRecognizer) {
+    let firstViewFrame = firtsViews.frame
+    let secondViewFrame = secondViews.frame
+    let hellperRange: CGFloat = 20
+
     let gestureTranslation = gesture.translation(in: view)
+
     guard let gestureView = gesture.view else {
       return
     }
@@ -67,19 +66,17 @@ class ViewController: UIViewController {
     guard gesture.state == .ended else {
       return
     }
-    moveViewViaPanAction(firtsViews: thirdView, secondViews: fourthView)
     
-  }
-  
-  func moveViewViaPanAction(firtsViews: CustomView!, secondViews: CustomView!) {
-    let firstViewFrame = firtsViews.frame
-    let secondViewFrame = secondViews.frame
-    
-    for value in Int(secondViews.frame.minY)...Int(secondViews.frame.maxY) {
-      if Int(firstViewFrame.origin.y) == value {
-        secondViews.changeView = true
-        firtsViews.isHidden = true
-        print("View changed")
+    for yValue in Int(secondViewFrame.minY - hellperRange)...Int(secondViewFrame.maxY + hellperRange) {
+      if Int(firstViewFrame.origin.y) == yValue {
+        for xValue in Int(secondViewFrame.minX - hellperRange)...Int(secondViewFrame.maxX + hellperRange) {
+          if Int(firstViewFrame.origin.x) == xValue {
+            secondViews.changeView = true
+            firtsViews.isHidden = true
+            secondViews.superview?.bringSubviewToFront(secondViews)
+            print("View changed")
+          }
+        }
       }
     }
     print("View panned")

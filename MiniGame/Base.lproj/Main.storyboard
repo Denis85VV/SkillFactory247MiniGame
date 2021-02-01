@@ -53,21 +53,33 @@
                                 <rect key="frame" x="74" y="337" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4oT-7X-b0G" appends="YES" id="9bC-f5-tqq"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y20-xu-kta" customClass="CustomView" customModule="MiniGame" customModuleProvider="target">
                                 <rect key="frame" x="88" y="513" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="OCf-ZB-3Zd" appends="YES" id="af4-cu-t62"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Uo-6O-BSk" customClass="CustomView" customModule="MiniGame" customModuleProvider="target">
                                 <rect key="frame" x="233" y="573" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8sw-sf-HeH" appends="YES" id="Sg5-CE-rJX"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Mq-KW-8F5" customClass="CustomView" customModule="MiniGame" customModuleProvider="target">
                                 <rect key="frame" x="245" y="416" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Yl8-3c-pxq" appends="YES" id="wJV-XF-Ukk"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -98,6 +110,26 @@
                 <panGestureRecognizer minimumNumberOfTouches="1" id="HKM-5G-h0R">
                     <connections>
                         <action selector="thirdPanAction:" destination="BYZ-38-t0r" id="6i7-I7-UiK"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="4oT-7X-b0G">
+                    <connections>
+                        <action selector="fourthPanAction:" destination="BYZ-38-t0r" id="ltS-uL-0Ng"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Yl8-3c-pxq">
+                    <connections>
+                        <action selector="fifthPanAction:" destination="BYZ-38-t0r" id="7TE-W7-1sR"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="OCf-ZB-3Zd">
+                    <connections>
+                        <action selector="sixthPanAction:" destination="BYZ-38-t0r" id="t4K-Cf-riF"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="8sw-sf-HeH">
+                    <connections>
+                        <action selector="seventhPanAction:" destination="BYZ-38-t0r" id="BV4-bE-F92"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>

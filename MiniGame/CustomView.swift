@@ -41,6 +41,7 @@ import UIKit
     workingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     workingView.layer.cornerRadius = workingView.frame.height / 2
     workingView.backgroundColor = .some(lightBlue)
+    sendSubviewToBack(workingView)
     
     addSubview(workingView)
   }
@@ -49,8 +50,9 @@ import UIKit
     didSet {
       if changeView {
         workingView.backgroundColor = .some(darkBlue)
-        workingView.frame = CGRect(x: 0, y: 0, width: self.frame.height * 1.4, height: self.frame.height * 1.4)
+        workingView.frame = CGRect(x: 0, y: 0, width: self.frame.height * 1.2, height: self.frame.height * 1.2)
         workingView.layer.cornerRadius = workingView.frame.height / 2
+        bringSubviewToFront(workingView)
         backgroundColor = .clear
       }
     }
