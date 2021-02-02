@@ -23,30 +23,65 @@ class ViewController: UIViewController {
   
   @IBAction func panAction(_ gesture: UIPanGestureRecognizer) {
     eatView(firtsViews: firstView, secondViews: secondView, gesture: gesture)
+    eatView(firtsViews: firstView, secondViews: thirdView, gesture: gesture)
+    eatView(firtsViews: firstView, secondViews: fourthView, gesture: gesture)
+    eatView(firtsViews: firstView, secondViews: fifthView, gesture: gesture)
+    eatView(firtsViews: firstView, secondViews: sixthView, gesture: gesture)
+    eatView(firtsViews: firstView, secondViews: seventhView, gesture: gesture)
   }
   
   @IBAction func secondPanAction(_ gesture: UIPanGestureRecognizer) {
+    eatView(firtsViews: secondView, secondViews: firstView, gesture: gesture)
     eatView(firtsViews: secondView, secondViews: thirdView, gesture: gesture)
+    eatView(firtsViews: secondView, secondViews: fourthView, gesture: gesture)
+    eatView(firtsViews: secondView, secondViews: fifthView, gesture: gesture)
+    eatView(firtsViews: secondView, secondViews: sixthView, gesture: gesture)
+    eatView(firtsViews: secondView, secondViews: seventhView, gesture: gesture)
   }
   
   @IBAction func thirdPanAction(_ gesture: UIPanGestureRecognizer) {
+    eatView(firtsViews: thirdView, secondViews: firstView, gesture: gesture)
+    eatView(firtsViews: thirdView, secondViews: secondView, gesture: gesture)
     eatView(firtsViews: thirdView, secondViews: fourthView, gesture: gesture)
+    eatView(firtsViews: thirdView, secondViews: fifthView, gesture: gesture)
+    eatView(firtsViews: thirdView, secondViews: sixthView, gesture: gesture)
+    eatView(firtsViews: thirdView, secondViews: seventhView, gesture: gesture)
   }
   
   @IBAction func fourthPanAction(_ gesture: UIPanGestureRecognizer) {
+    eatView(firtsViews: fourthView, secondViews: firstView, gesture: gesture)
+    eatView(firtsViews: fourthView, secondViews: secondView, gesture: gesture)
+    eatView(firtsViews: fourthView, secondViews: thirdView, gesture: gesture)
     eatView(firtsViews: fourthView, secondViews: fifthView, gesture: gesture)
+    eatView(firtsViews: fourthView, secondViews: sixthView, gesture: gesture)
+    eatView(firtsViews: fourthView, secondViews: seventhView, gesture: gesture)
   }
   
   @IBAction func fifthPanAction(_ gesture: UIPanGestureRecognizer) {
+    eatView(firtsViews: fifthView, secondViews: firstView, gesture: gesture)
+    eatView(firtsViews: fifthView, secondViews: secondView, gesture: gesture)
+    eatView(firtsViews: fifthView, secondViews: thirdView, gesture: gesture)
+    eatView(firtsViews: fifthView, secondViews: fourthView, gesture: gesture)
     eatView(firtsViews: fifthView, secondViews: sixthView, gesture: gesture)
+    eatView(firtsViews: fifthView, secondViews: seventhView, gesture: gesture)
   }
   
   @IBAction func sixthPanAction(_ gesture: UIPanGestureRecognizer) {
+    eatView(firtsViews: sixthView, secondViews: firstView, gesture: gesture)
+    eatView(firtsViews: sixthView, secondViews: secondView, gesture: gesture)
+    eatView(firtsViews: sixthView, secondViews: thirdView, gesture: gesture)
+    eatView(firtsViews: sixthView, secondViews: fourthView, gesture: gesture)
+    eatView(firtsViews: sixthView, secondViews: fifthView, gesture: gesture)
     eatView(firtsViews: sixthView, secondViews: seventhView, gesture: gesture)
   }
   
   @IBAction func seventhPanAction(_ gesture: UIPanGestureRecognizer) {
     eatView(firtsViews: seventhView, secondViews: firstView, gesture: gesture)
+    eatView(firtsViews: seventhView, secondViews: secondView, gesture: gesture)
+    eatView(firtsViews: seventhView, secondViews: thirdView, gesture: gesture)
+    eatView(firtsViews: seventhView, secondViews: fourthView, gesture: gesture)
+    eatView(firtsViews: seventhView, secondViews: fifthView, gesture: gesture)
+    eatView(firtsViews: seventhView, secondViews: sixthView, gesture: gesture)
   }
   
   func eatView(firtsViews: CustomView!, secondViews: CustomView!, gesture: UIPanGestureRecognizer) {
@@ -72,7 +107,7 @@ class ViewController: UIViewController {
       if Int(firstViewFrame.origin.y) == yValue {
         for xValue in Int(secondViewFrame.minX - hellperRange)...Int(secondViewFrame.maxX + hellperRange) {
           if Int(firstViewFrame.origin.x) == xValue {
-            UIView.animate(withDuration: 2) {
+            UIView.animate(withDuration: 4) {
               secondViews.changeView = true
               firtsViews.isHidden = true
               secondViews.superview?.bringSubviewToFront(secondViews)
