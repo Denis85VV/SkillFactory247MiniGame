@@ -14,7 +14,7 @@ import UIKit
   var xibName: String = "CustomView"
   
   let darkBlue = UIColor(red: 0, green: 0, blue: 1, alpha: 1)
-  let lightBlue = UIColor(red: 0.1, green: 0.5, blue: 1, alpha: 1)
+  let lightBlue = UIColor(red: 0.1, green: 0.7, blue: 1, alpha: 1)
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -50,7 +50,7 @@ import UIKit
     didSet {
       if changeView {
         workingView.backgroundColor = .some(darkBlue)
-        workingView.frame = CGRect(x: 0, y: 0, width: self.frame.height * 1.2, height: self.frame.height * 1.2)
+        workingView.frame = CGRect(x: 0, y: 0, width: self.frame.height * 1.3, height: self.frame.height * 1.3)
         workingView.layer.cornerRadius = workingView.frame.height / 2
         bringSubviewToFront(workingView)
         backgroundColor = .clear

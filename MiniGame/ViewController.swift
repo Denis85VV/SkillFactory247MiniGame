@@ -72,9 +72,11 @@ class ViewController: UIViewController {
       if Int(firstViewFrame.origin.y) == yValue {
         for xValue in Int(secondViewFrame.minX - hellperRange)...Int(secondViewFrame.maxX + hellperRange) {
           if Int(firstViewFrame.origin.x) == xValue {
-            secondViews.changeView = true
-            firtsViews.isHidden = true
-            secondViews.superview?.bringSubviewToFront(secondViews)
+            UIView.animate(withDuration: 2) {
+              secondViews.changeView = true
+              firtsViews.isHidden = true
+              secondViews.superview?.bringSubviewToFront(secondViews)
+            }
             print("View changed")
           }
         }
